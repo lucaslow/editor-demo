@@ -1,0 +1,12 @@
+.eui-v1-tabs__header {
+  border-bottom: 1px solid #eef2f8;
+  height: 48px;
+  @include flexWrapper(left, center);
+  .tag-name {
+    span {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 17px 16px 17px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+/* 全局样式变量 */
+$gWidth: 100%;
+$gHeight: 100%;
+
+/* 按钮样式 */
+$btnBgColor: #377ffc;
+$btnColor: #ffffff;
+
+/* header */
+$headerH: 58px;
+$headerShadow: #b8b8b8;
+
+/* euiMain */
+$mainHeight: calc(100% - #{$headerH});
+
+/* euiPanel */
+$attrPanelWidth: 276px

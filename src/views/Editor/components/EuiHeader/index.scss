@@ -1,0 +1,98 @@
+.eui-headerLeft {
+  @include flexWrapper(flex-start, center);
+  .editor-logo {
+    width: 173px;
+    cursor: pointer;
+  }
+}
+.eui-button {
+  border-radius: 4px;
+  // border: 1px solid #e0e5ea;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all 0.2s ease-out;
+  margin: 0 5px;
+  box-sizing: border-box;
+}
+.eui-button-size-40 {
+  width: 40px;
+  height: 40px;
+}
+.editor-snapshot-button {
+  .button-contain {
+    width: 20px;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+    }
+  }
+  &:hover {
+    background-color: #f1f2f4;
+  }
+  &.disable {
+    opacity: 0.5;
+    cursor: no-drop;
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+.editor-preview-button {
+  width: 70px;
+  height: 40px;
+  margin: 0;
+  @include flexWrapper(space-around, center);
+  &:hover {
+    color: red;
+  }
+}
+
+.editor-save-button {
+  width: 70px;
+  height: 40px;
+  @include flexWrapper(space-around, center);
+  img {
+    width: 20px;
+  }
+  .button-contain {
+    white-space: nowrap
+  }
+}
+
+.eui-headerRight {
+  @include flexWrapper(flex-start, center);
+  .download-wrapper {
+    width: 109px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #1d1dea;
+    .eui-button-download {
+      width: 100%;
+      height: 100%;
+      color: #ffffff;
+      font-size: 17px;
+      line-height: 1.4;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .user-wrapper {
+    @include flexWrapper(center, center);
+    .nickname {
+      font-size: 15px;
+      color: #000000;
+    }
+    .avator {
+      width: 35px;
+      margin-right: 10px;
+    }
+  }
+}

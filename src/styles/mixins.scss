@@ -1,0 +1,28 @@
+@mixin link-colors {
+  color: #000000;
+  text-decoration: none;
+  &:hover {
+    color: red;
+  }
+}
+
+@mixin flexWrapper($hor, $ver) {
+  display: flex;
+  align-items: $ver;
+  justify-content: $hor;
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+@mixin userSelectNone {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

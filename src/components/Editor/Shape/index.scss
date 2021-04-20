@@ -1,0 +1,95 @@
+.shape {
+  position: absolute;
+  box-sizing: border-box;
+  cursor: pointer;
+  // &:hover {
+  //   border: 1px solid #6ccfff;
+  // }
+}
+.active {
+  &::before {
+    content: '';
+    box-sizing: initial;
+    border: 2px solid #6ccfff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: -2px 0 0 -2px;
+  }
+}
+.editor-transition {
+  transition: opacity 0.3s;
+}
+// 八个点的样式
+.shape-point {
+  position: absolute;
+  z-index: 1;
+  b {
+    box-sizing: border-box;
+    display: block;
+    background: #fff;
+    border: 1px solid #c0c5cf;
+    box-shadow: 0 0 2px 0 rgba(86, 90, 98, 0.2);
+    border-radius: 6px;
+  }
+  &.editor-grip-t,
+  &.editor-grip-b {
+    b {
+      width: 16px;
+      height: 10px;
+    }
+  }
+  &.editor-grip-l,
+  &.editor-grip-r {
+    b {
+      width: 10px;
+      height: 16px;
+    }
+  }
+  &.editor-grip-lt,
+  &.editor-grip-rt,
+  &.editor-grip-lb,
+  &.editor-grip-rb {
+    b {
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+    }
+  }
+}
+// 旋转按钮样
+.editor-rotator {
+  margin: 10px 0 0 -11px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  z-index: 4;
+  cursor: url(../../../assets/editor/rotate_icon_cursor.png) 11 9, pointer;
+  b {
+    background-image: url(../../../assets/editor/rotate_icon_m.png);
+    width: 25px;
+    height: 25px;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 2;
+    display: block;
+    span {
+      font-weight: bold;
+      font-style: normal;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 20px;
+      line-height: 20px;
+      padding: 0 10px;
+      font-size: 13px;
+      background: #0e1217;
+      border-radius: 5px;
+      color: #fff;
+    }
+  }
+}
+

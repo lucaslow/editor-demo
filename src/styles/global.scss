@@ -1,0 +1,88 @@
+/* 全局样式 */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  width: 6px;
+  background: rgba(#101f1c, 0.1);
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(#101f1c, 0.5);
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(#101f1c, 1);
+}
+
+body {
+  background-color: #eef2f8;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+span {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* 弹窗样式 */
+// 全屏弹窗
+.editor-full-dialog {
+  width: 990px !important;
+  height: 504px;
+  box-sizing: border-box;
+  .ant-modal-content {
+    height: 100%;
+    padding: 20px;
+    .ant-modal-body {
+      height: 100%;
+      width: 100%;
+      @include flexWrapper(center, center);
+    }
+  }
+  .dialog-close-btn {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+  }
+}
+
+/* 画布最外层样式 */
+.editor-global-wrap {
+  margin: 0 auto;
+  overflow: visible;
+  position: relative;
+  transform-origin: left top;
+  background-color: #fff;
+}
+
+/* Antv */
+.ant-select {
+  width: 100% !important;
+  height: 100%;
+  .ant-select-selection--single {
+    height: 100%;
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .ant-select-selection__rendered {
+    height: 100%;
+    @include flexWrapper(flex-start, center);
+  }
+  
+}
